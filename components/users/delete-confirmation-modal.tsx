@@ -29,7 +29,7 @@ export function DeleteConfirmationModal({
 
   const handleConfirm = async () => {
     if (!reason.trim()) {
-      setError("Please provide a reason for deletion")
+      setError("O‘chirish sababi ko‘rsatilishi shart")
       return
     }
 
@@ -52,23 +52,23 @@ export function DeleteConfirmationModal({
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <AlertCircle className="h-5 w-5 text-destructive" />
-            Delete User
+            Foydalanuvchini o‘chirish
           </DialogTitle>
           <DialogDescription>
-            Are you sure you want to delete{" "}
+            Haqiqatan ham ushbu foydalanuvchini o‘chirmoqchimisiz:{" "}
             <span className="font-semibold">
               {user?.firstName} {user?.lastName}
             </span>
-            ? This action cannot be undone.
+            ? Bu amalni qaytarib bo‘lmaydi.
           </DialogDescription>
         </DialogHeader>
 
         <div className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="reason">Reason for deletion *</Label>
+            <Label htmlFor="reason">O‘chirish sababi *</Label>
             <Textarea
               id="reason"
-              placeholder="Please provide a reason for deleting this user..."
+              placeholder="Iltimos, foydalanuvchini nega o‘chirmoqchi ekanligingizni yozing..."
               value={reason}
               onChange={(e) => {
                 setReason(e.target.value)
@@ -87,11 +87,11 @@ export function DeleteConfirmationModal({
 
           <div className="flex gap-3 justify-end pt-4">
             <Button type="button" variant="outline" onClick={() => handleOpenChange(false)} disabled={isLoading}>
-              Cancel
+              Bekor qilish
             </Button>
             <Button onClick={handleConfirm} disabled={isLoading} variant="destructive" className="gap-2">
               {isLoading && <Spinner size="sm" />}
-              Delete User
+              Foydalanuvchini o‘chirish
             </Button>
           </div>
         </div>
