@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Polygon2 — Users CRUD + Map Polygon Drawing (React + TypeScript)
 
-## Getting Started
+Ushbu loyiha texnik topshiriq asosida ishlab chiqilgan bo‘lib, ikki mustaqil sahifadan iborat:
 
-First, run the development server:
+1. **Users (CRUD) sahifasi** — foydalanuvchilar bilan ishlash, form validatsiya, modal, IndexedDB saqlash
+2. **Map (Xarita) sahifasi** — Leaflet/react-leaflet yordamida polygon chizish
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Loyiha to‘liq **React + TypeScript**, **Zustand**, **Shadcn UI**, **Tailwind CSS**, **IndexedDB**, **React-Leaflet**, va **ESLint/Prettier** asosida tayyorlangan.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 📌 Funksionallik (TL;DR)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ✅ **1) Users — CRUD tizimi (Majburiy)**
+- Foydalanuvchilar ro‘yxati
+- Yangi user qo‘shish — **modal ichida forma**
+- Foydalanuvchi ma’lumotini tahrirlash
+- O‘chirish (tasdiqlovchi modal bilan)
+- Qidiruv (500ms debounce bilan)
+- Pagination (har 5 ta elementdan)
+- Skeleton loading (animatsiya)
+- IndexedDB orqali ma’lumotni saqlash (offline-friendly)
+- react-hook-form + zod orqali validatsiya
 
-## Learn More
+### 🗺 **2) Map sahifasi — Polygon chizish (Majburiy)**
+- Leaflet / react-leaflet orqali interaktiv xarita
+- Har bosilgan nuqta orqali polygon vertexlari qo‘shiladi
+- Polygon shakllantirish
+- Polygonni o‘chirish / tozalash
+- Bonus: Turf.js bilan polygon maydonini hisoblash (ixtiyoriy)
+- Performance optimization (yirik datasetlar uchun)
 
-To learn more about Next.js, take a look at the following resources:
+### 📚 **3) Repository va Hujjatlashtirish (Majburiy)**
+- GitHub public repo
+- To‘liq README.md:
+  - o‘rnatish bo‘yicha qo‘llanma
+  - Node versiyasi
+  - kutubxonalar ro‘yxati
+  - qisqa arxitektura izohi
+  - funksiyalar va ishlash mantig‘i
+  - attachments (screenshot/video)
+- Semantik commitlar (`feat:`, `fix:`, `chore:`, `refactor:`)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 🔧 Texnik Talablar (To‘liq bajarilgan)
 
-## Deploy on Vercel
+| Talab | Holati |
+|------|--------|
+| React + TypeScript | ✅ |
+| Lint: ESLint + Prettier | ✅ |
+| UI kit: Tailwind CSS + Shadcn UI | ✅ |
+| State: Zustand (persist bilan) | ✅ |
+| Form: react-hook-form + zod | ✅ |
+| Storage: IndexedDB | ✅ |
+| Map: Leaflet/react-leaflet | ✅ |
+| Responsive dizayn | ✅ |
+| Clean code & folder architecture | ✅ |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 📁 Loyiha Arxitekturasi
+
